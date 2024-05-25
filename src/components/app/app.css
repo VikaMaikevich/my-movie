@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.main {
+  max-width: 990px;
+  max-height: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  background-color: #ffffff;
+}
+
+.movies-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.spinner {
+  margin-left: 50%;
+}
+
+.pagination {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 720px) {
+  .container {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 426px) {
+  .container {
+    max-width: 320px;
+  }
+}
+.offline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}

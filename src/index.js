@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import { Online, Offline } from 'react-detect-offline'
+import { Alert } from 'antd'
+import ReactDOM from 'react-dom/client'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from './components/app/app'
+
+import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <App />
+    <Online>
+      <App className="app" />
+    </Online>
+    <Offline>
+      <div className="offline">
+        <Alert
+          type="error"
+          message="Sorry, the site is unavailable due to connection issues. Please check your internet connection and refresh the page"
+        />
+      </div>
+    </Offline>
   </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+)

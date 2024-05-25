@@ -1,0 +1,9 @@
+search-form {
+  margin-bottom: 34px;
+}
+
+@media (max-width: 720px) {
+  .search-form {
+    margin-bottom: 10px;
+  }
+}
